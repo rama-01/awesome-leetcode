@@ -1,5 +1,4 @@
-import { swap } from "./utils"
-
+import { swap, testSort } from "hy-algokit"
 const quickSortArr = (arr: number[][]): number[][] => {
   // 2.使arr数组按第一个元素排序
   const len = arr.length
