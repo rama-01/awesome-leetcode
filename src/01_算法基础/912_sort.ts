@@ -29,7 +29,7 @@ const quickSort = (arr: number[]): number[] => {
   return arr
 }
 
-// testSort(quickSort)
+testSort(quickSort)
 
 // 2. 归并排序
 const mergeSort = (arr: number[]): number[] => {
