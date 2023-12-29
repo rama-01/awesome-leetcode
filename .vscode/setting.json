@@ -1,0 +1,18 @@
+{
+    "editor.tabSize": 2,
+    "files.autoSave": "afterDelay",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "m.run": "onSave",
+    "workbench.editor.enablePreview": false,
+    "search.exclude": {
+        "**/dist": true,
+        "**/static": true
+    },
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "svg.preview.background": "transparent",
+    "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.bracketSameLine": true
+}
