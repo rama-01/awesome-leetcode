@@ -19,3 +19,5 @@ console.log(eraseOverlapIntervals(intervals));
 
 const intervals2 = [[1, 2], [1, 2], [1, 2]]
 console.log(eraseOverlapIntervals(intervals2));
+
+export {}

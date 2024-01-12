@@ -25,3 +25,5 @@ const lengthOfLIS = (nums: number[]) => {
     // 
   }
 }
+
+export {}

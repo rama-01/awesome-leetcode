@@ -29,3 +29,5 @@ const grid2 = [[1, 2, 3], [4, 5, 6]]
 console.log(findMinPathSum(grid2));
 const grid3 = [[3]]
 console.log(findMinPathSum(grid3));
+
+export {}

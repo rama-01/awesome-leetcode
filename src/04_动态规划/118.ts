@@ -24,3 +24,5 @@ const generate = (numRows: number): number[][] => {
 console.log(generate(1));
 console.log(generate(2));
 console.log(generate(5));
+
+export {}
