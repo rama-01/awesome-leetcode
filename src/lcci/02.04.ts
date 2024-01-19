@@ -1,2 +1,19 @@
-import ListNode from "../types/ListNode";
+import ListNode from '../types/ListNode'
 
+function partition(head: ListNode | null, x: number): ListNode | null {
+  if (head == null) {
+    return head
+  }
+  let cur = head
+  while (cur.next != null) {
+    let node = cur.next
+    if (node.val < x) {
+      [head, node.next, cur.next] = [node, head, node.next] //解释这行代码的含义
+    } else {
+      cur = cur.next
+    }
+  }
+  return head
+}
+
+export {}

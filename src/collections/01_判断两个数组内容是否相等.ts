@@ -32,3 +32,5 @@ const areArraysContentEqual = <T>(arr1: T[], arr2: T[]): boolean => {
 const array1 = [1, 2, 3, 4, '5', '5', NaN, NaN]
 const array2 = [1, 2, 3, 4, '5', "5", NaN, NaN]
 console.log(areArraysContentEqual(array1, array2));
+
+export {}

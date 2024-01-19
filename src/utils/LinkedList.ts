@@ -7,7 +7,7 @@ class LinkedList {
     return this.size
   }
   // append
-  append(value:number) {
+  append(value: number) {
     // 创建一个新节点
     const newNode = new ListNode(value)
     if (!this.head) {
@@ -34,10 +34,12 @@ class LinkedList {
   }
 }
 
-const linkedList = new LinkedList()
+const linkedList: LinkedList = new LinkedList()
 linkedList.append(1)
 linkedList.append(2)
 linkedList.append(3)
 linkedList.append(4)
 linkedList.traverse()
+console.log(linkedList.length)
+
 export {}
