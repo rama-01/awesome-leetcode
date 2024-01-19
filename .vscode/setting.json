@@ -1,5 +1,5 @@
 {
-    "editor.tabSize": 4,
+    "editor.tabSize": 2,
     "files.autoSave": "afterDelay",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
@@ -14,5 +14,6 @@
     "prettier.singleQuote": true,
     "svg.preview.background": "transparent",
     "prettier.htmlWhitespaceSensitivity": "ignore",
-    "prettier.bracketSameLine": true
+    "prettier.bracketSameLine": true,
+    "editor.autoIndent": true
 }

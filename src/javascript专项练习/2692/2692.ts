@@ -19,7 +19,8 @@ function makeImmutable(obj: Obj): Obj {
   const fn = ['pop', 'push', 'shift', 'unshift', 'splice', 'sort', 'reverse']
   const dfs = (obj: Obj) => {
     for (const key in obj) {
-      if (typeof obj[key] === 'object' && obj[key] !== null) {  //ts7055
+      if (typeof obj[key] === 'object' && obj[key] !== null) {
+        //ts7055
         obj[key] = dfs(obj[key])
       }
     }
