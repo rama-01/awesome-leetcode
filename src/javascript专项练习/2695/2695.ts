@@ -1,17 +1,17 @@
 class ArrayWrapper {
-  private nums: number[]
-  private s: number
-  constructor(nums: number[]) {
-    this.nums = nums
-    this.s = nums.reduce((pre, cur) => pre + cur, 0)
-  }
-  valueOf() {
-    return this.s
-  }
-  toString() {
-    // return `"[${this.nums}]"`
-    return `[${this.nums}]`
-  }
+    private nums: number[]
+    private s: number
+    constructor(nums: number[]) {
+        this.nums = nums
+        this.s = nums.reduce((pre, cur) => pre + cur, 0)
+    }
+    valueOf() {
+        return this.s
+    }
+    toString() {
+        // return `"[${this.nums}]"`
+        return `[${this.nums}]`
+    }
 }
 
 const obj1 = new ArrayWrapper([1, 2]) as unknown as number
