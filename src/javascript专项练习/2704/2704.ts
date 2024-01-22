@@ -2,6 +2,7 @@ const expect = (
   o: any
 ): Record<'toBe' | 'notToBe', (...args: any[]) => boolean | never> => ({
   toBe(p: any): boolean | never {
+    //这里函数可能抛出错误，但是如果函数返回值类型为boolean，ts为何也不报错？
     if (o === p) return true
     throw new Error('Not Equal')
   },
