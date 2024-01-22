@@ -1,0 +1,11 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rama-01/awesome-leetcode.git",
+  "author": "rama <ramastarzhu01@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.11.5"
+  }
+}

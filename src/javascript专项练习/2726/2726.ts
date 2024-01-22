@@ -22,7 +22,7 @@ class Calculator {
         this.result *= value
         return this
     }
-    divide(value: number): Calculator | never {
+    divide(value: number): Calculator {
         if (value === 0) throw 'Division by zero is not allowed'
         this.result /= value
         return this
