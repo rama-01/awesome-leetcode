@@ -1,3 +1,3 @@
-for (let i = 0; i < 4; ++i) {
-    console.log(i);
+for (const i of []) {
+    console.log(i)
 }
