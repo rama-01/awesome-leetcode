@@ -1,4 +1,4 @@
-import ListNode from '../types/ListNode'
+// import ListNode from '../../types/ListNode'
 
 /* 标准答案1 */
 function isPalindrome(head: ListNode | null): boolean {
