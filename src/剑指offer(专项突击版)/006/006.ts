@@ -11,29 +11,28 @@ const solution = (numbers: Array<number>, target: number) => {
 
 /* 优化1 二分查找 */
 const solution2 = (numbers: Array<number>, target: number) => {
-    const n = numbers.length
-    for (let l = 0; l < n - 1; ) {
-        /*  while (l < r) {
-            const m = Math.floor((l + r) / 2)
-            if (numbers[m] < target - numbers[l]) {
-                break
-            } else if (numbers[m] > target - numbers[l]) {
-                r = m - 1
-            } else {
-                return [l, m]
-            }
-        } */
-        for (let r = n - 1; r > l; ) {
-            const m = Math.ceil((l + r) / 2)
-            if (numbers[m] < target - numbers[l]) {
-                l = m + 1
-            } else if (numbers[m] > target - numbers[l]) {
-                r = m - 1
-            } else {
-                return [l, m]
-            }
-        }
-    }
+    // for (let l = 0; l < n - 1; ) {
+    //     /*  while (l < r) {
+    //         const m = Math.floor((l + r) / 2)
+    //         if (numbers[m] < target - numbers[l]) {
+    //             break
+    //         } else if (numbers[m] > target - numbers[l]) {
+    //             r = m - 1
+    //         } else {
+    //             return [l, m]
+    //         }
+    //     } */
+    //     for (let r = n - 1; r > l; ) {
+    //         const m = Math.ceil((l + r) / 2)
+    //         if (numbers[m] < target - numbers[l]) {
+    //             l = m + 1
+    //         } else if (numbers[m] > target - numbers[l]) {
+    //             r = m - 1
+    //         } else {
+    //             return [l, m]
+    //         }
+    //     }
+    // }
     return -1
 }
 
