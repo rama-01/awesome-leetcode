@@ -1,3 +1,4 @@
+/* 和大于等于 target 的最短子数组 */
 const minSubArrayLength = (nums: Array<number>, target: number) => {
     let minLength = Infinity
     let left = 0,
