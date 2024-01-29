@@ -1,6 +1,5 @@
 const maxProduct = (words: Array<string>) => {
-    const t = words.map((i) => ({ word: i, length: i.length }))
-    words = t.sort((a, b) => b.length - a.length).map((j) => j.word)
+    words.sort((a, b) => b.length - a.length)
     for (let i = 0, n = words.length; i < n - 1; i++) {
         outerLoop: for (let j = i + 1; j < n; j++) {
             let isUnique: boolean = true
@@ -38,7 +37,7 @@ function maxProduct2(words: string[]): number {
     return ans
 }
 
-const words = ['a', 'aa', 'aaa', 'aaaa']
+const  words = ["abcw","baz","foo","bar","fxyz","abcdef"]
 console.log(maxProduct(words))
 
 export {}
