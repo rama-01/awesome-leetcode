@@ -18,4 +18,21 @@ const isSubstring = (p: string, c: string) => {
     return false
 }
 
+const minWindow = (s: string, t: string) => {
+    let w = t.length
+    while (w <= s.length) {
+        for (let i = 0; i <= s.length - w; i++) {
+            const window = s.slice(i, i + w)
+            if (isSubstring(window, t)) {
+                return window
+            }
+        }
+        w++
+    }
+    return ''
+}
 
+const s = "a", t = "aa"
+console.log(minWindow(s, t))
+
+export {}
