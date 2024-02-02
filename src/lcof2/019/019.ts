@@ -4,15 +4,27 @@ const validPalindrome = (str: string) => {
         if (delCount > 1) return false
         if (str.charAt(l) !== str.charAt(r)) {
             delCount++
-            if (str.charAt(++l) === str.charAt(r)) {
-                continue
-            }
-            if (str.charAt(--l) === str.charAt(--r)) {
-                continue
-            }
-            if (str.charAt(++l) !== str.charAt(++r) && str.charAt(--l) !== str.charAt(--r)) {
+            if (str.charAt(++l) === str.charAt(r)) continue
+            if (str.charAt(--l) === str.charAt(--r)) continue
+            if (str.charAt(++l) !== str.charAt(++r) && str.charAt(--l) !== str.charAt(--r)) return false
+        }
+    }
+    return true
+}
+
+/* standard answer */
+function validPalindrome2(s: string): boolean {
+    const check = (i: number, j: number): boolean => {
+        for (; i < j; ++i, --j) {
+            if (s[i] !== s[j]) {
                 return false
             }
+        }
+        return true
+    }
+    for (let i = 0, j = s.length - 1; i < j; ++i, --j) {
+        if (s[i] !== s[j]) {
+            return check(i + 1, j) || check(i, j - 1)
         }
     }
     return true

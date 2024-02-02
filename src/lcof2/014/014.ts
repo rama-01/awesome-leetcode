@@ -13,6 +13,9 @@ function permuteString(str: string): string[] {
     permute('', str)
     return result
 }
+console.log(permuteString('abc'));
+
+
 /* 字符串中的变位词 */
 const strToMap = (str: string): Map<string, number> => {
     const strMap = new Map()
@@ -46,6 +49,6 @@ const solution = (str1: string, str2: string) => {
 }
 
 const s1= "ab", s2 = "eidboaoo"
-console.log(solution(s1, s2))
+// console.log(solution(s1, s2))
 
 export {}
