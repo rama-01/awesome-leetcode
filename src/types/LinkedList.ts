@@ -1,4 +1,4 @@
-import ListNode from '../types/ListNode'
+import ListNode from './ListNode'
 
 class LinkedList {
   private head: ListNode | null = null
