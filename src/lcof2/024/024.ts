@@ -13,3 +13,6 @@ export const reverseLinkedList = (head: ListNode | null) => {
     }
     return pre
 }
+
+const head = [1, 2, 3, 4, 5]
+const linkedList = generateLinkedList(head)
