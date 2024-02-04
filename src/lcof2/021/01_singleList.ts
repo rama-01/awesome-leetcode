@@ -17,8 +17,28 @@ export default class LinkedList {
         return this.size
     }
 
-    get headNode() { 
+    get headNode() {
         return this.head
+    }
+
+    get tailNode() {
+        let current = this.head
+        while (current?.next) {
+            current = current.next
+        }
+        return current
+    }
+
+    // 获取正序第n个节点
+    getNthListNode(index: number): ListNode | null {
+        if (index < 1 || index > this.size) return null
+        let current = this.head
+        let j = 1
+        while (j < index) {
+            current = current!.next
+            j++
+        }
+        return current
     }
 
     append(value: number) {
@@ -33,6 +53,7 @@ export default class LinkedList {
             current.next = Node
         }
         this.size++
+        // return this
     }
 
     traverse() {
