@@ -6,7 +6,8 @@
   "author": "rama <ramastarzhu01@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^20.11.5"
+    "@types/node": "^20.11.5",
+    "hy-algokit": "^1.4.0"
   },
   "devDependencies": {
     "ts-node": "^10.9.2"
