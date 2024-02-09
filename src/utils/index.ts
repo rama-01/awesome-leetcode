@@ -1,5 +1,4 @@
 import LinkedList from '../types/LinkedList'
-import ListNode from '../types/ListNode'
 
 export const swap = (arr: number[], i: number, j: number) => {
     const tmp = arr[i]

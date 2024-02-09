@@ -15,5 +15,5 @@ export const solution = (asteroids: Array<number>) => {
     return stack
 }
 
-const asteroids = [5,10,-5]
+const asteroids = [10,2,-5]
 console.log(solution(asteroids))
