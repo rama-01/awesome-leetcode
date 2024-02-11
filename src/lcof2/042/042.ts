@@ -6,7 +6,7 @@ export class RecentCounter {
     }
 
     get tail() {
-        return this.requests[this.requests.length - 1]1
+        return this.requests[this.requests.length - 1]
     }
 
     ping(t: number) {
