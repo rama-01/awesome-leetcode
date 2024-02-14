@@ -12,5 +12,6 @@ export const replaceWords = (dictionary: Array<string>, sentence: string) => {
     return sen.join(' ')
 }
 
-const dictionary = ["a", "aa", "aaa", "aaaa"], sentence = "a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa"
+const dictionary = ['a', 'aa', 'aaa', 'aaaa'],
+    sentence = 'a aa a aaaa aaa aaa aaa aaaaaa bbb baba ababa'
 console.log(replaceWords(dictionary, sentence))
