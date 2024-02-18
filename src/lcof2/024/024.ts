@@ -13,11 +13,3 @@ export const reverseLinkedList = (head: ListNode | null) => {
     }
     return pre
 }
-
-const head = [1, 2, 3, 4, 5]
-const linkedList = generateLinkedList(head)
-
-linkedList.traverse()
-const node = reverseLinkedList(linkedList.headNode)
-console.log(node)
-linkedList.traverse() //为什么输出1

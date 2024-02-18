@@ -7,10 +7,10 @@ export const swap = (arr: number[], i: number, j: number) => {
     arr[j] = tmp
 }
 
-export const generateLinkedList = (list: Array<number>): LinkedList => {
+export const generateLinkedList = (list: Array<number>): ListNode | null => {
     const linkedList = new LinkedList()
     for (const item of list) {
         linkedList.append(item)
     }
-    return linkedList
+    return linkedList.headNode
 }

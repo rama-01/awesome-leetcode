@@ -38,7 +38,7 @@ function dailyTemperatures2(temperatures: number[]): number[] {
         const temperature = temperatures[i]
         while (stack.length !== 0 && temperatures[stack[stack.length - 1]] < temperature) {
             const j = stack.pop()
-            res[j] = i - j
+            res[j!] = i - j!
         }
         stack.push(i)
     }
@@ -46,4 +46,5 @@ function dailyTemperatures2(temperatures: number[]): number[] {
 }
 
 const temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
-console.log(waitDays(temperatures))
+// console.log(waitDays(temperatures))
+console.log(dailyTemperatures2(temperatures))
