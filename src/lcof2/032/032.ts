@@ -40,7 +40,7 @@ function isAnagram2(s: string, t: string): boolean {
 }
 
 const s = 'rat',
-    t = 'car'
+    t = 'rta'
 console.log(isAnagram(s, t))
 
 export default isAnagram
