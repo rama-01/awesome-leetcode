@@ -11,6 +11,7 @@ class Stack:
     def pop(self):
         self.items.pop()
 
+    # 查看栈顶元素
     def peak(self):
         return self.items[len(self.items) - 1]
 
