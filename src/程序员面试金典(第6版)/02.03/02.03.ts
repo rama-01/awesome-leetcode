@@ -1,4 +1,4 @@
-import ListNode from '../types/ListNode'
+import ListNode from '../../types/ListNode'
 
 /* Do not return anything, modify node in-place instead. */
 /* 删除中间节点 */

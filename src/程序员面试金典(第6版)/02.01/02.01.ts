@@ -1,4 +1,4 @@
-import ListNode from '../types/ListNode'
+import ListNode from '../../types/ListNode'
 
 function removeDuplicateNodes(head: ListNode | null): ListNode | null {
   if (head == null) {

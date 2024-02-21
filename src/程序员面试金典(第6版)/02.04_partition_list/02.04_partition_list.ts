@@ -1,4 +1,4 @@
-import ListNode from '../types/ListNode'
+import ListNode from '../../types/ListNode'
 
 function partition(head: ListNode | null, x: number): ListNode | null {
   if (head == null) {

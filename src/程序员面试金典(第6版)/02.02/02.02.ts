@@ -1,4 +1,4 @@
-import ListNode from '../types/ListNode'
+import ListNode from '../../types/ListNode'
 /* 双指针，链表 */
 const kthToLast = (head: ListNode, k: number): number => {
   /* 定义快，慢指针 */
