@@ -31,5 +31,3 @@ class Maze:
                             -(rowsInMaze - 1) / 2 - .5,
                             (columnsInMaze - 1) / 2 + .5,
                             (rowsInMaze - 1) / 2 + .5)
-
-

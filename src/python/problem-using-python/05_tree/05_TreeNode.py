@@ -1,11 +1,12 @@
-﻿class TreeNode:
+class TreeNode:
     def __init__(self, key, val, left=None, right=None, parent=None):
         self.key = key
-        self.payload = val
+        self.val = val
         self.leftChild = left
         self.rightChild = right
         self.parent = parent
 
+    # has函数判断有某个值，如果有返回它，否则返回None
     def hasLeftChild(self):
         return self.leftChild
 
@@ -22,7 +23,7 @@
         return not self.parent
 
     def isLeaf(self):
-        return not (self.rightChild or self.leftChild)
+        return not (self.leftChild or self.rightChild)
 
     def hasAnyChildren(self):
         return self.rightChild or self.leftChild
@@ -32,7 +33,7 @@
 
     def replaceNodeData(self, key, value, lc, rc):
         self.key = key
-        self.payload = value
+        self.val = value
         self.leftChild = lc
         self.rightChild = rc
         if self.hasLeftChild():

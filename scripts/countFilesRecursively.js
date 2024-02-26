@@ -21,6 +21,6 @@ function countFilesRecursively(directory) {
     return count;
 }
 
-const folderPath = 'D:/PrivateFiles/LearningCenter/data-structure&algorithm/algorithm/leetcode/src'; // 替换为实际文件夹路径
+const folderPath = 'D:/LearningCenter/dataStructure-algorithm/algorithm/leetcode/src'; // 替换为实际文件夹路径
 const totalFilesCount = countFilesRecursively(folderPath);
 console.log(`Total number of files: ${totalFilesCount}`);
