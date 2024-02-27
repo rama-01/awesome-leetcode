@@ -16,4 +16,4 @@ export const solution = (asteroids: Array<number>) => {
 }
 
 const asteroids = [10,2,-5]
-console.log(solution(asteroids))
+console.log(solution(asteroids))k

@@ -99,3 +99,106 @@ class BinarySearchTree:
             return True
         else:
             return False
+
+    # 删除操作
+    def delete(self, key):
+        if self.size > 1:
+            nodeToRemove = self._get(key, self.root)
+            if nodeToRemove:
+                self.remove(nodeToRemove)
+                self.size -= 1
+            else:
+                raise KeyError('key not in tree')
+        elif self.size == 1 and self.root.key == key:
+            self.root = None
+            self.size -= 1
+        else:
+            raise KeyError('key not in tree')
+
+    def __delItem__(self, key):
+        self.delete(key)
+
+    # 考虑删除节点的3中情况：
+    # 1. 没有子节点
+    # 2. 只有一个子节点
+    # 3. 有两个子节点
+    def remove(self, currentNode):
+        if currentNode.isLeaf():
+            if currentNode.isLeftChild():
+                currentNode.parent.leftChild = None
+            else:
+                currentNode.parent.rightChild = None
+        elif currentNode.hasBothChildren():
+            pass
+        else:
+            if currentNode.hasLeftChild():
+                if currentNode.ifLeftChild():
+                    currentNode.leftChild.parent = currentNode.parent
+                    currentNode.parent.leftChild = currentNode.leftChild
+                elif currentNode.ifRightChild():
+                    currentNode.leftChild.parent = currentNode.parent
+                    currentNode.parent.rightChild = currentNode.leftChild
+                else:
+                    currentNode.replaceNodeData(currentNode.leftChild, key, currentNode.payload, currentNode.leftChild.leftChild, currentNode.leftChild.rightChild)
+            else:
+                if currentNode.isLeftChid():
+                    currentNode.rightChild.parent = currentNode.parent
+                    currentNode.parent.leftChild = currentNode.rightChild
+                elif currentNode.isRightChild():
+                    currentNode.rightChild.parent = currentNode.parent
+                    currentNode.parent.rightChild = currentNode.rightChild
+                else:
+                    currentNode.replaceNodeData(currentNode.rightChild, key, currentNode.payload, currentNode.rightChild.leftChild, currentNode.rightChild.rightChild)
+
+    # 查找后继节点考虑以下3种情况
+    # 如果节点有右子节点，则后继节点是右子树中的最小的键。
+    # 如果节点没有右子节点并且是父节点的左子节点，则父节点是后继节点。
+    # 如果节点是其父节点的右子节点，并且它本身没有右子节点，则此节点的后继节点是其父节点的后继节点，不包括此节点。
+    def findSuccessor(self):
+        successor = None
+        if self.hasRightChild():
+            successor = self.rightChild.findMin()
+        else:
+            if self.parent:
+                if self.isLeftChild():
+                    successor = self.parent
+                else:
+                    successor = self.parent.findSuccessor()
+        return successor
+
+    # 查找小节点
+    def finMin(self):
+        currentNode = self
+        while currentNode.hasLeftChild():
+            currentNode = currentNode.leftChild
+        return currentNode
+
+    def spliceOut(self):
+        if self.isLeaf():
+            if self.isLeftChild():
+                self.parent.leftChild = None
+            else:
+                self.parent.rightChild = None
+        else:
+            if self.hasLeftChild():
+                self.leftChild.parent = self.parent
+                if self.isLeftChild():
+                    self.parent.leftChild = self.leftChild
+                else:
+                    self.parent.rightChild = self.leftChild
+            else:
+                self.rightChild.parent = self.parent
+                if self.isLeftChild():
+                    self.parent.leftChild = self.rightChild
+                else:
+                    self.parent.rightChild = self.rightChild
+
+    def __iter__(self):
+        if self:
+            if self.hasLeftChild():
+                for elem in self.leftChiLd:
+                    yield elem
+            yield self.key
+            if self.hasRightChild():
+                for elem in self.rightChild:
+                    yield elem
