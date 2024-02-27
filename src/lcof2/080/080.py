@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
         res = []
@@ -13,3 +16,6 @@ class Solution:
 
         dfs(1, n, k, [])
         return res
+
+
+print(Solution().combine(4, 2))
